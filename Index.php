@@ -13,47 +13,90 @@ echo "Hola Mundo";
 
     <style>
 
-        /* ============================= */
-        /* Texto                         */
-        /* ============================= */
+        /* ================================= */
+        /* Texto                             */
+        /* ================================= */
 
         h1 {
             color: blue;
         }
 
 
-        /* ============================= */
-        /* Margin - versión corta        */
-        /* ============================= */
+        /* ================================= */
+        /* PADDING - VERSIÓN CORTA           */
+        /* ================================= */
 
-        .seccion-corta {
-            background: lightgreen;
+        .padding-corta {
+            background: lightblue;
 
-            /* Padding */
+            /* Padding - versión corta */
+            padding: 20px 40px;
+
+            margin: 20px;
+        }
+
+
+        /* ================================= */
+        /* PADDING - VERSIÓN LARGA           */
+        /* ================================= */
+
+        .padding-larga {
+            background: lightblue;
+
+            /* Padding - versión larga */
             padding-top: 20px;
             padding-right: 40px;
             padding-bottom: 20px;
             padding-left: 40px;
+
+            margin: 20px;
+        }
+
+
+        /* ================================= */
+        /* MARGIN - VERSIÓN CORTA            */
+        /* ================================= */
+
+        .margin-corta {
+            background: lightgreen;
+
+            /* Padding */
+            padding: 20px 40px;
 
             /* Margin - versión corta */
             margin: 20px;
         }
 
 
-        /* ============================= */
-        /* Margin - versión larga        */
-        /* ============================= */
+        /* ================================= */
+        /* MARGIN - VERSIÓN LARGA            */
+        /* ================================= */
 
-        .seccion-larga {
+        .margin-larga {
             background: lightpink;
 
             /* Padding */
-            padding-top: 20px;
-            padding-right: 40px;
-            padding-bottom: 20px;
-            padding-left: 40px;
+            padding: 20px 40px;
 
             /* Margin - versión larga */
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+
+        /* ================================= */
+        /* MARGIN - DIFERENTES MEDIDAS       */
+        /* ================================= */
+
+        .margin-diferentes {
+            background: lightyellow;
+
+            /* Padding */
+            padding: 20px 40px;
+
+            /* Margin - diferentes medidas */
             margin-top: 20px;
             margin-right: 30px;
             margin-bottom: 40px;
@@ -61,9 +104,9 @@ echo "Hola Mundo";
         }
 
 
-        /* ============================= */
-        /* Border - diferentes estilos   */
-        /* ============================= */
+        /* ================================= */
+        /* BORDER - DIFERENTES ESTILOS       */
+        /* ================================= */
 
         .borde-solid {
             border: 5px solid black;
@@ -126,9 +169,9 @@ echo "Hola Mundo";
         }
 
 
-        /* ============================= */
-        /* Colores claros                */
-        /* ============================= */
+        /* ================================= */
+        /* COLORES CLAROS                    */
+        /* ================================= */
 
         .color-lightgreen {
             background-color: lightgreen;
@@ -155,9 +198,9 @@ echo "Hola Mundo";
         }
 
 
-        /* ============================= */
-        /* Colores oscuros               */
-        /* ============================= */
+        /* ================================= */
+        /* COLORES OSCUROS                   */
+        /* ================================= */
 
         .color-darkgreen {
             background-color: darkgreen;
@@ -189,6 +232,10 @@ echo "Hola Mundo";
 
 <body>
 
+    <!-- ================================= -->
+    <!-- TÍTULOS                           -->
+    <!-- ================================= -->
+
     <h1>Texto de Ejemplo</h1>
 
     <h2>Texto de Ejemplo</h2>
@@ -198,155 +245,278 @@ echo "Hola Mundo";
     <h6>Texto de Ejemplo</h6>
 
 
-    <!-- ============================= -->
-    <!-- Margin - versión corta        -->
-    <!-- ============================= -->
+    <!-- ================================= -->
+    <!-- PADDING - VERSIÓN CORTA           -->
+    <!-- ================================= -->
 
-    <div class="seccion-corta">
-        <h2>Titulo del parrafo</h2>
-        <p>Este es un parrafo</p>
+    <div class="padding-corta">
+
+        <h2>Padding - versión corta</h2>
+
+        <p>Este es un ejemplo utilizando padding en su versión corta.</p>
+
     </div>
 
 
-    <!-- ============================= -->
-    <!-- Margin - versión larga        -->
-    <!-- ============================= -->
+    <!-- ================================= -->
+    <!-- PADDING - VERSIÓN LARGA           -->
+    <!-- ================================= -->
 
-    <div class="seccion-larga">
-        <h2>Titulo del parrafo</h2>
-        <p>Este es un parrafo</p>
+    <div class="padding-larga">
+
+        <h2>Padding - versión larga</h2>
+
+        <p>Este es un ejemplo utilizando padding en su versión larga.</p>
+
     </div>
 
 
-    <!-- ============================= -->
-    <!-- Border - Solid                -->
-    <!-- ============================= -->
+    <!-- ================================= -->
+    <!-- MARGIN - VERSIÓN CORTA            -->
+    <!-- ================================= -->
+
+    <div class="margin-corta">
+
+        <h2>Margin - versión corta</h2>
+
+        <p>Este es un ejemplo utilizando margin en su versión corta.</p>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- MARGIN - VERSIÓN LARGA            -->
+    <!-- ================================= -->
+
+    <div class="margin-larga">
+
+        <h2>Margin - versión larga</h2>
+
+        <p>Este es un ejemplo utilizando margin en su versión larga.</p>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- MARGIN - DIFERENTES MEDIDAS       -->
+    <!-- ================================= -->
+
+    <div class="margin-diferentes">
+
+        <h2>Margin - diferentes medidas</h2>
+
+        <p>Este es un ejemplo utilizando diferentes medidas de margin.</p>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- BORDER - SOLID                    -->
+    <!-- ================================= -->
 
     <div class="borde-solid">
+
         <h2>Solid</h2>
+
         <p>Este es un borde solid.</p>
+
     </div>
 
 
-    <!-- Border - Dashed -->
+    <!-- ================================= -->
+    <!-- BORDER - DASHED                   -->
+    <!-- ================================= -->
 
     <div class="borde-dashed">
+
         <h2>Dashed</h2>
+
         <p>Este es un borde dashed.</p>
+
     </div>
 
 
-    <!-- Border - Dotted -->
+    <!-- ================================= -->
+    <!-- BORDER - DOTTED                   -->
+    <!-- ================================= -->
 
     <div class="borde-dotted">
+
         <h2>Dotted</h2>
+
         <p>Este es un borde dotted.</p>
+
     </div>
 
 
-    <!-- Border - Double -->
+    <!-- ================================= -->
+    <!-- BORDER - DOUBLE                   -->
+    <!-- ================================= -->
 
     <div class="borde-double">
+
         <h2>Double</h2>
+
         <p>Este es un borde double.</p>
+
     </div>
 
 
-    <!-- Border - Groove -->
+    <!-- ================================= -->
+    <!-- BORDER - GROOVE                   -->
+    <!-- ================================= -->
 
     <div class="borde-groove">
+
         <h2>Groove</h2>
+
         <p>Este es un borde groove.</p>
+
     </div>
 
 
-    <!-- Border - Ridge -->
+    <!-- ================================= -->
+    <!-- BORDER - RIDGE                    -->
+    <!-- ================================= -->
 
     <div class="borde-ridge">
+
         <h2>Ridge</h2>
+
         <p>Este es un borde ridge.</p>
+
     </div>
 
 
-    <!-- Border - Inset -->
+    <!-- ================================= -->
+    <!-- BORDER - INSET                    -->
+    <!-- ================================= -->
 
     <div class="borde-inset">
+
         <h2>Inset</h2>
+
         <p>Este es un borde inset.</p>
+
     </div>
 
 
-    <!-- Border - Outset -->
+    <!-- ================================= -->
+    <!-- BORDER - OUTSET                   -->
+    <!-- ================================= -->
 
     <div class="borde-outset">
+
         <h2>Outset</h2>
+
         <p>Este es un borde outset.</p>
+
     </div>
 
 
-    <!-- Border - None -->
+    <!-- ================================= -->
+    <!-- BORDER - NONE                     -->
+    <!-- ================================= -->
 
     <div class="borde-none">
+
         <h2>None</h2>
+
         <p>Este es un borde none.</p>
+
     </div>
 
 
-    <!-- Border - Hidden -->
+    <!-- ================================= -->
+    <!-- BORDER - HIDDEN                   -->
+    <!-- ================================= -->
 
     <div class="borde-hidden">
+
         <h2>Hidden</h2>
+
         <p>Este es un borde hidden.</p>
+
     </div>
 
 
-    <!-- ============================= -->
-    <!-- Colores claros                -->
-    <!-- ============================= -->
+    <!-- ================================= -->
+    <!-- COLORES CLAROS                    -->
+    <!-- ================================= -->
 
     <div class="color-lightgreen">
+
         <h2>Light Green</h2>
+
         <p>Este es un ejemplo de lightgreen.</p>
+
     </div>
+
 
     <div class="color-lightblue">
+
         <h2>Light Blue</h2>
+
         <p>Este es un ejemplo de lightblue.</p>
+
     </div>
+
 
     <div class="color-lightpink">
+
         <h2>Light Pink</h2>
+
         <p>Este es un ejemplo de lightpink.</p>
+
     </div>
+
 
     <div class="color-lightgray">
+
         <h2>Light Gray</h2>
+
         <p>Este es un ejemplo de lightgray.</p>
+
     </div>
 
 
-    <!-- ============================= -->
-    <!-- Colores oscuros               -->
-    <!-- ============================= -->
+    <!-- ================================= -->
+    <!-- COLORES OSCUROS                   -->
+    <!-- ================================= -->
 
     <div class="color-darkgreen">
+
         <h2>Dark Green</h2>
+
         <p>Este es un ejemplo de darkgreen.</p>
+
     </div>
+
 
     <div class="color-darkblue">
+
         <h2>Dark Blue</h2>
+
         <p>Este es un ejemplo de darkblue.</p>
+
     </div>
+
 
     <div class="color-darkred">
+
         <h2>Dark Red</h2>
+
         <p>Este es un ejemplo de darkred.</p>
+
     </div>
 
+
     <div class="color-darkgray">
+
         <h2>Dark Gray</h2>
+
         <p>Este es un ejemplo de darkgray.</p>
+
     </div>
 
 </body>

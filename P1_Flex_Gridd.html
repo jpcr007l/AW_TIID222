@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- Movimiento 2  --> <!-- Movimiento 3  -->
+
+<Style>
+
+    .Contenedor{
+        /* display: flex;   */       /* Display felx sirve para alinear elementos de manera horizontal o vertical. */    
+        /* flex-direction: row;  */  /* flex direccion sirve para definir la direccion de los elementos, row es horizontal y column es vertical. */
+        gap: 20px;             /* gap sirve para definir el espacio entre los elementos. */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .card-larga{      /* card-larga es una clase que se le da a un elemento para que ocupe mas espacio en el grid. */
+        grid-column: 3;
+        grid-row: span 2;
+        display:flex;
+        flex-direction: column;
+    }
+
+</Style>
+
+</head>
+<body>
+     <!-- Movimiento 1  -->
+
+     
+     <!-- Un contenedor es un elemento que contiene otros elementos dentro de el. -->
+      <!-- Aqui se crea un contenedor con display flex y se le da un gap de 20px entre los elementos. -->
+
+    <div. class="Contenedor">
+        <div class="Card" style="background-color: rgb(170, 170, 172);">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="300" height="300 alt="Descripcion de la imagen">
+             <h1>Card 1</h1>
+        </div>
+        <div class="Card" style="background-color: rgb(170, 170, 172);">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="300" height="300 alt="Descripcion de la imagen">
+             <h1>Prueba</h1>
+        </div>
+        <div class="card-larga" style="background-color: rgb(170, 170, 172);">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="300" height="300 alt="Descripcion de la imagen">
+             <h1>Card 2</h1>
+        </div>
+        <div class="Card" style="background-color: rgb(70, 70, 85);">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="300" height="300 alt="Descripcion de la imagen">
+             <h1>Card 3</h1>
+        </div>
+        <div class="Card" style="background-color: rgb(70, 70, 85);">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="300" height="300 alt="Descripcion de la imagen">
+             <h1>Card 4</h1>
+        </div>
+        <div class="Card" style="background-color: rgb(70, 70, 85);">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="300" height="300 alt="Descripcion de la imagen">
+             <h1>Card 5</h1>
+        </div>
+        <div class="Card" style="background-color: rgb(70, 70, 85);">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="300" height="300 alt="Descripcion de la imagen">
+             <h1>Card 6</h1>
+        </div>
+    
+</body>
+</html>
