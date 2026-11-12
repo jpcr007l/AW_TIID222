@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <main class="contenedor">
+        <section class="tarjeta panel">
+            <span class="etiqueta">Administrador</span>
+            <h1>Panel de administrador</h1>
+            <p>Bienvenido, {{ nombre }}.</p>
+            <p>Has iniciado sesión correctamente con una cuenta de administrador.</p>
+            <a class="boton-enlace" href="{{ url_for('logout') }}">Cerrar sesión</a>
+        </section>
+    </main>
+</body>
+</html>
+
+
+<!--
+==================================================
+Autor: Perez Juarez Javier Antonio
+Materia: Aplicaciones Web
+Actividad: Introducción a Flask
+Descripción: Desarrollo de interfaces HTML con Flask.
+==================================================
+-->
