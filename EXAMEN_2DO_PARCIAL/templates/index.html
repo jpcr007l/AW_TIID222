@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de artículos de papelería</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .contenedor {
+            display: flex;
+            gap: 35px;
+            align-items: flex-start;
+        }
+
+        .izquierda {
+            width: 65%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .derecha {
+            width: 35%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 3px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            margin-bottom: 35px;
+        }
+
+        th {
+            background-color: #337ab7;
+            color: white;
+            padding: 15px;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            border: none;
+            padding: 14px 22px;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .guardar {
+            background-color: #337ab7;
+            width: 100%;
+        }
+
+        .editar {
+            background-color: #c58b2e;
+        }
+
+        .eliminar {
+            background-color: #cc4444;
+        }
+
+        .mensaje {
+            color: green;
+            font-weight: bold;
+        }
+
+        .operaciones {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .operaciones button {
+            padding: 9px 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CRUD DE ARTÍCULOS DE PAPELERÍA</h1>
+
+    {% with mensajes = get_flashed_messages() %}
+        {% if mensajes %}
+            {% for mensaje in mensajes %}
+                <p class="mensaje">{{ mensaje }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div class="contenedor">
+
+        <div class="izquierda">
+
+            <h2>Contenido de artículos registrados</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre del producto</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+
+                {% for articulo in listaArticulos %}
+                <tr>
+                    <td>{{ articulo[0] }}</td>
+                    <td>{{ articulo[1] }}</td>
+                    <td>{{ articulo[2] }}</td>
+                    <td>${{ articulo[3] }}</td>
+                    <td>{{ articulo[4] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <h2>Operaciones de artículos</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre del producto</th>
+                    <th>Operaciones</th>
+                </tr>
+
+                {% for articulo in listaArticulos %}
+                <tr>
+                    <td>{{ articulo[0] }}</td>
+                    <td>{{ articulo[1] }}</td>
+                    <td>
+                        <div class="operaciones">
+
+                            <form action="/seleccionar_editar" method="POST">
+                                <input type="hidden" name="id_articulo" value="{{ articulo[0] }}">
+                                <button type="submit" class="editar">Editar</button>
+                            </form>
+
+                            <form action="/seleccionar_eliminar" method="POST">
+                                <input type="hidden" name="id_articulo" value="{{ articulo[0] }}">
+                                <button type="submit" class="eliminar">Eliminar</button>
+                            </form>
+
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+        <div class="derecha">
+
+            <h2>Registrar artículo</h2>
+
+            <form action="/guardar" method="POST">
+
+                <label>Nombre del producto:</label>
+                <input type="text" name="nombre_producto" required>
+
+                <label>Descripción:</label>
+                <textarea name="descripcion" required></textarea>
+
+                <label>Precio:</label>
+                <input type="number" name="precio" step="0.01" min="0" required>
+
+                <label>Stock / Cantidad:</label>
+                <input type="number" name="stock" min="0" required>
+
+                <button type="submit" class="guardar">
+                    Guardar artículo
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
